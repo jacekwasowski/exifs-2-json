@@ -1,10 +1,10 @@
 #  Exifs to JSON
 
 1. Get Exif data from your files from some directory (and all subdirectories)
-2. Clear Exif data if needed (e.g. remove Buffers. Add your filters if needed)
+2. Clear Exif data if needed (e.g. remove Buffers. Add your filters if needed.)
 3. Normalize geo data: latitude and longitude
 4. Save as JSON file
-5. Use this file as you want
+5. Use this data as you want
 
 ## Usage
 
