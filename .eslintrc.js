@@ -7,7 +7,7 @@ module.exports = {
   rules: {
     'arrow-body-style': [2, 'always'],
     'arrow-parens': [2, 'always'],
-    'comma-dangle':  [2, 'never'],
+    'comma-dangle': [2, 'never'],
     'class-methods-use-this': 'off',
     'no-param-reassign': [2, { props: false }], // http://eslint.org/docs/rules/no-param-reassign
     'no-underscore-dangle': 'off',
@@ -16,32 +16,32 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
 
     'max-len': [2, 120, 2, { // https://github.com/eslint/eslint/blob/master/docs/rules/max-len.md
-      'ignoreUrls': true,
-      'ignoreComments': false
+      ignoreUrls: true,
+      ignoreComments: false
     }],
 
     'smells/no-complex-switch-case': 1,
     'smells/no-setinterval': 1,
     'smells/no-this-assign': 2,
-    'complexity': ['error', 20],
+    complexity: ['error', 20],
     'max-depth': ['error', 4],
     'max-statements-per-line': 2,
     'no-multiple-empty-lines': 2,
 
     'valid-jsdoc': [2, {
-      'requireReturn': false,
-      'requireReturnDescription': false, // Avoid forcing useless descriptions
-      'requireParamDescription': false, // Avoid forcing useless descriptions
-      'prefer': {
-        'return': 'returns'
+      requireReturn: false,
+      requireReturnDescription: false, // Avoid forcing useless descriptions
+      requireParamDescription: false, // Avoid forcing useless descriptions
+      prefer: {
+        return: 'returns'
       },
-      'preferType': {
-        'Integer': 'Number',
-        'string': 'String',
-        'boolean': 'Boolean',
-        'bool': 'Boolean',
-        'object': 'Object',
-        'array': 'Array'
+      preferType: {
+        Integer: 'Number',
+        string: 'String',
+        boolean: 'Boolean',
+        bool: 'Boolean',
+        object: 'Object',
+        array: 'Array'
       }
     }]
   }
