@@ -2,21 +2,25 @@
   "name": "exifs-2-json",
   "version": "1.0.0",
   "description": "Get Exif data from photos from some dir, clear and update this data and next save as JSON file. This is part of bigger project",
-  "main": "index.js",
+  "main": "./index.js",
+  "exports": "./index.js",
+  "type": "module",
   "dependencies": {
     "exif-async": "1.0.5"
   },
   "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-preset-env": "1.7.0",
     "eslint": "^7.9.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "2.22.0",
     "eslint-plugin-smells": "1.0.1"
   },
   "scripts": {
-    "run": "babel-node index",
+    "run": "node index",
     "lint": "eslint src --fix"
+  },
+  "engines": {
+    "node": ">=13.2",
+    "npm": ">=6"
   },
   "author": "Jacek Wasowski",
   "license": "MIT"

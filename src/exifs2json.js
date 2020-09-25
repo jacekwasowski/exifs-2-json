@@ -1,8 +1,8 @@
 import fs from 'fs';
 import getExif from 'exif-async';
-import clearExifs from './clearExifs';
-import getFiles from './getFiles';
-import logError from './logError';
+import clearExifs from './clearExifs.js';
+import getFiles from './getFiles.js';
+import logError from './logError.js';
 
 /**
  * @param {Object[]} exifs
@@ -19,7 +19,7 @@ function saveExifs(exifs, output) {
 
 export default async (dir, output) => {
   const getExifs = getFiles(dir).map(async (file) => {
-    return Object.assign({ file }, await getExif(file));
+    return { file, ...await getExif(file) };
   });
 
   Promise.all(getExifs)

@@ -14,6 +14,7 @@ module.exports = {
     'no-useless-escape': 'off',
     'import/no-named-as-default-member': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'import/extensions': 'off',
 
     'max-len': [2, 120, 2, { // https://github.com/eslint/eslint/blob/master/docs/rules/max-len.md
       ignoreUrls: true,

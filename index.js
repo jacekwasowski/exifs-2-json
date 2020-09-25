@@ -1,4 +1,4 @@
-import exifs2json from './src/exifs2json';
+import exifs2json from './src/exifs2json.js';
 
 const dir = '/path/to/my/pictures';
 const output = './output.json';
