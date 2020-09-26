@@ -2,7 +2,25 @@
   "name": "exifs-2-json",
   "version": "1.0.0",
   "description": "Get Exif data from photos from some dir, clear and update this data and next save as JSON file. This is part of bigger project",
+  "keywords": [
+    "exif",
+    "geo",
+    "coordinates",
+    "metadata",
+    "jpg",
+    "jpeg"
+  ],
+  "homepage": "https://github.com/jacekwasowski/exifs-2-json",
+  "license": "MIT",
+  "author": "Jacek Wasowski",
+  "files": [
+    "/src"
+  ],
   "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacekwasowski/exifs-2-json.git"
+  },
   "dependencies": {
     "exif-async": "^1.0.6"
   },
@@ -12,13 +30,10 @@
     "eslint-plugin-import": "^2.22.0"
   },
   "scripts": {
-    "run": "node index",
     "lint": "eslint . --fix"
   },
   "engines": {
     "node": ">=13.2",
     "npm": ">=6"
-  },
-  "author": "Jacek Wasowski",
-  "license": "MIT"
+  }
 }
