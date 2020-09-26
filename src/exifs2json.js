@@ -11,6 +11,7 @@ function to(promise) {
 
 async function getExifFromFile(file) {
   const [err, exif] = await to(getExif(file));
+
   return {
     file,
     err: (err && err.message) || null,
@@ -18,9 +19,11 @@ async function getExifFromFile(file) {
   };
 }
 
-function getExifs(dir) {
-  const files = getFiles(dir);
-  return Promise.all(files.map(getExifFromFile));
+function getExifs(path) {
+  const files = getFiles(path);
+  const promises = files.map(getExifFromFile);
+
+  return Promise.all(promises);
 }
 
 module.exports = async (path, { noBuffers = true, output }) => {
