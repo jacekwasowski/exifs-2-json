@@ -1,3 +1,3 @@
-import exifs2json from './src/exifs2json.js';
+const exifs2json = require('./src/exifs2json');
 
-export default async (path, options) => exifs2json(path, options);
+module.exports = async (path, options) => exifs2json(path, options);

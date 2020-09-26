@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "Get Exif data from photos from some dir, clear and update this data and next save as JSON file. This is part of bigger project",
   "main": "./index.js",
-  "exports": "./index.js",
-  "type": "module",
   "dependencies": {
     "exif-async": "^1.0.6"
   },

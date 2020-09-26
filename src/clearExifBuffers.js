@@ -14,7 +14,7 @@ function clearExifBuffers(exif) {
   return exifCopy;
 }
 
-export default (data) => {
+module.exports = (data) => {
   data.forEach(({ exif }) => {
     clearExifBuffers(exif);
   });

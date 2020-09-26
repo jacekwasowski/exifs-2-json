@@ -1,7 +1,7 @@
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
-export default function walkSync(dir, fileList = []) {
+function walkSync(dir, fileList = []) {
   const files = fs.readdirSync(dir);
 
   files.forEach((file) => {
@@ -14,3 +14,5 @@ export default function walkSync(dir, fileList = []) {
 
   return fileList;
 }
+
+module.exports = walkSync;
