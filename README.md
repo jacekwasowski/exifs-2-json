@@ -27,11 +27,11 @@ Use `options` to specify the output file name and path.
 name | type | default | description
 ---|---|--- |---
 output | string | _undefined_ | A file name with path. Without a value, the file will not be created.
-noBuffers | boolean | true | With `true` all `Buffer` objects will be removed from Exif data. 
+noBuffers | boolean | true | With `true` all `Buffer` objects will be removed from Exif data. [Read more about Buffers](https://nodejs.dev/learn/nodejs-buffers). 
 
 ## Results
 
-The module returns an array of objects with the following structure:
+The module returns an object with the following structure:
 
 ```json
 {
@@ -54,7 +54,7 @@ The module returns an array of objects with the following structure:
   ]
 }
 ```
-A particular `Exif` object can look like below, but the properties and contents of the returned metadata might vary widely depending on the data saved in the file. You can expect dictionaries that look similar to this:
+A single `Exif` object can look like below, but the properties and contents of the metadata might vary widely depending on the data saved in the file. You can expect dictionaries that look similar to this:
 
 ```json
 {
