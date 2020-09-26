@@ -1,5 +1,4 @@
 import fs from 'fs';
-import logError from './logError.js';
 
 /**
  * @param {Object[]} data
@@ -7,9 +6,6 @@ import logError from './logError.js';
  */
 export default (data, output) => {
   fs.writeFile(output, JSON.stringify({ data }), (error) => {
-    if (error) {
-      return logError(error);
-    }
-    return null;
+    if (error) console.error('Error saving the file:', error); // eslint-disable-line no-console
   });
 };
