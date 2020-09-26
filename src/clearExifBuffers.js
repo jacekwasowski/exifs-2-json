@@ -1,4 +1,4 @@
-function clearBuffers(exif) {
+function clearExifBuffers(exif) {
   if (!exif || !Object.keys(exif)) return null;
 
   const exifCopy = { ...exif };
@@ -16,7 +16,7 @@ function clearBuffers(exif) {
 
 export default (data) => {
   data.forEach(({ exif }) => {
-    clearBuffers(exif);
+    clearExifBuffers(exif);
   });
 
   return data;
