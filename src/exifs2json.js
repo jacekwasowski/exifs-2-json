@@ -1,12 +1,12 @@
 import getExif from 'exif-async';
 import clearExifs from './clearExifs.js';
 import getFiles from './getFiles.js';
-import saveFile from './saveFile.js';
+import saveFile from './saveFile';
 
 function to(promise) {
   return promise
-    .then((data) => { return [null, data]; })
-    .catch((err) => { return [err || new Error(), null]; });
+    .then((data) => [null, data])
+    .catch((err) => [err || new Error(), null]);
 }
 
 async function getExifFromFile(file) {
@@ -14,7 +14,7 @@ async function getExifFromFile(file) {
   return {
     file,
     err: (err && err.message) || null,
-    exif
+    exif,
   };
 }
 

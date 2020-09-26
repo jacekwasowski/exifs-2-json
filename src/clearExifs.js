@@ -1,15 +1,17 @@
 function clearBuffers(exif) {
   if (!exif || !Object.keys(exif)) return null;
 
-  Object.keys(exif).forEach((exifElem) => {
-    Object.keys(exif[exifElem]).forEach((elem) => {
+  const exifCopy = { ...exif };
+
+  Object.keys(exifCopy).forEach((exifElem) => {
+    Object.keys(exifCopy[exifElem]).forEach((elem) => {
       if (Buffer.isBuffer(exif[exifElem][elem])) {
-        delete exif[exifElem][elem];
+        delete exifCopy[exifElem][elem];
       }
     });
   });
 
-  return exif;
+  return exifCopy;
 }
 
 export default (data) => {
