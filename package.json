@@ -15,7 +15,7 @@
   },
   "scripts": {
     "run": "node index",
-    "lint": "eslint src --fix"
+    "lint": "eslint . --fix"
   },
   "engines": {
     "node": ">=13.2",
