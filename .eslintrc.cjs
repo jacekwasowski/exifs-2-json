@@ -3,7 +3,6 @@ module.exports = {
     node: true
   },
   extends: ['airbnb-base'],
-  plugins: ['smells'],
   rules: {
     'arrow-body-style': [2, 'always'],
     'arrow-parens': [2, 'always'],
@@ -21,9 +20,6 @@ module.exports = {
       ignoreComments: false
     }],
 
-    'smells/no-complex-switch-case': 1,
-    'smells/no-setinterval': 1,
-    'smells/no-this-assign': 2,
     complexity: ['error', 20],
     'max-depth': ['error', 4],
     'max-statements-per-line': 2,
