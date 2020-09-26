@@ -1,8 +1,6 @@
-// extend this functionality if needed
-
-const CLEAR_BUFFER = true;
-
 function clearBuffers(exif) {
+  if (!exif || !Object.keys(exif)) return null;
+
   Object.keys(exif).forEach((exifElem) => {
     Object.keys(exif[exifElem]).forEach((elem) => {
       if (Buffer.isBuffer(exif[exifElem][elem])) {
@@ -14,12 +12,10 @@ function clearBuffers(exif) {
   return exif;
 }
 
-export default (exifs) => {
-  exifs.forEach((exif) => {
-    if (CLEAR_BUFFER) {
-      clearBuffers(exif);
-    }
+export default (data) => {
+  data.forEach(({ exif }) => {
+    clearBuffers(exif);
   });
 
-  return exifs;
+  return data;
 };
