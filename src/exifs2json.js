@@ -25,7 +25,11 @@ function saveExifs(exifs, output) {
 
 async function getExifFromFile(file) {
   const [err, exif] = await to(getExif(file));
-  return { file, err: err?.message, exif };
+  return {
+    file,
+    err: (err && err.message) || null,
+    exif
+  };
 }
 
 function getExifs(dir) {

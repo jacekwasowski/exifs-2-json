@@ -11,8 +11,7 @@
   "devDependencies": {
     "eslint": "^7.9.0",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "2.22.0",
-    "eslint-plugin-smells": "1.0.1"
+    "eslint-plugin-import": "2.22.0"
   },
   "scripts": {
     "run": "node index",
