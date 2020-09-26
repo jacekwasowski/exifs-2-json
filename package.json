@@ -1,12 +1,14 @@
 {
   "name": "exifs-2-json",
   "version": "1.0.0",
-  "description": "Get Exif data from photos from some dir, clear and update this data and next save as JSON file. This is part of bigger project",
+  "description": "Get Exif data from JPG files from the folder and all sub-folders. Asynchronously. Export data to file or/and to a variable.",
   "keywords": [
     "exif",
     "geo",
+    "gps",
     "coordinates",
     "metadata",
+    "image",
     "jpg",
     "jpeg"
   ],
